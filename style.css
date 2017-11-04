@@ -15,8 +15,18 @@ h1 {
   height: 100vh;
   margin-top: -32px;
   padding-top: 32px;
+}
+
+.background {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-size: cover;
   background-repeat: no-repeat;
+  filter: brightness(70%);
 }
 
 .footer {
