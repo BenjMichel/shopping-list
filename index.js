@@ -12,8 +12,14 @@ export default class App extends Component {
     super();
     this.state = {
       photo: photos[Math.floor(Math.random() * photos.length)],
-      items: [],
+      currentItems: JSON.parse(localStorage.getItem('currentItems')) || [],
     };
+  }
+
+  addItemToList(item) {
+    const currentItems = [...this.state.currentItems, item];
+    this.setState({ showAdd: false, currentItems });
+    localStorage.setItem('currentItems', JSON.stringify(currentItems));
   }
 
   renderHome() {
@@ -21,9 +27,7 @@ export default class App extends Component {
       <div className="container">
         <div className="background" style={{ backgroundImage: `url(${this.state.photo})` }} />
         <h1>Shopping list!</h1>
-        <ul>
-          {this.state.items.map(item => <li>{item}</li>)}
-        </ul>
+        {this.state.currentItems.map(item => <div className="card-item">{item}</div>)}
         <div className="footer" onClick={() => this.setState({ showAdd: true })}>
           ajouter
         </div>
@@ -44,8 +48,7 @@ export default class App extends Component {
             />
           </div>
         </div>
-        <div className="footer" onClick={() =>
-          this.setState({ showAdd: false, items: [...this.state.items, this.state.currentItem] })}>
+        <div className="footer" onClick={() => this.addItemToList(this.state.currentItem)}>
           valider
         </div>
       </div>

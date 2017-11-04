@@ -9,6 +9,9 @@ html, body {
 h1 {
   text-align: center;
   color: white;
+  font-weight: 200;
+  filter:drop-shadow(4px 4px 4px black);
+  font-size: 40px;
 }
 
 .container {
@@ -43,6 +46,19 @@ h1 {
   background-color: white;
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   padding: 10px;
+}
+
+.card-item {
+  background-color: white;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 12px;
+  width: 60vw;
+  margin-bottom: 16px;
+  margin-left: 10vw;
+}
+
+.card-item:nth-child(odd) {
+  margin-left: 30vw;
 }
 
 .input {
