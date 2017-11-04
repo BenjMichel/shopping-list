@@ -1,11 +1,11 @@
 {
   "name": "shopping-list",
-  "short_name": "shopping-list",
+  "short_name": "shopping",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "background_color": "#f1e6ca",
+  "theme_color": "#182432",
   "icons": [
     {
       "src": "/assets/icon.png",

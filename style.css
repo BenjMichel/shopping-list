@@ -1,8 +1,34 @@
 html, body {
-	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
+  font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-	text-align: center;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -32px;
+  padding-top: 32px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  padding: 16px 0px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#182432+0,41465d+100 */
+  background: linear-gradient(to right, #182432 0%,#41465d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
