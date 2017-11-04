@@ -11,7 +11,8 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      photo: photos[Math.floor(Math.random() * photos.length)]
+      photo: photos[Math.floor(Math.random() * photos.length)],
+      items: [],
     };
   }
 
@@ -20,6 +21,9 @@ export default class App extends Component {
       <div className="container">
         <div className="background" style={{ backgroundImage: `url(${this.state.photo})` }} />
         <h1>Shopping list!</h1>
+        <ul>
+          {this.state.items.map(item => <li>{item}</li>)}
+        </ul>
         <div className="footer" onClick={() => this.setState({ showAdd: true })}>
           ajouter
         </div>
@@ -31,9 +35,18 @@ export default class App extends Component {
     return (
       <div className="container">
         <div className="background" style={{ backgroundImage: `url(${this.state.photo})` }} />
-        <input className="input" />
-        <div className="footer" onClick={() => this.setState({ showAdd: true })}>
-          ajouter
+        <div className="content">
+          <div className="card">
+            <input
+              type="text"
+              className="input"
+              onInput={e => this.setState({ currentItem: e.target.value })}
+            />
+          </div>
+        </div>
+        <div className="footer" onClick={() =>
+          this.setState({ showAdd: false, items: [...this.state.items, this.state.currentItem] })}>
+          valider
         </div>
       </div>
     );
