@@ -1,0 +1,23 @@
+.card-item {
+  background-color: white;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  padding-left: 12px;
+  width: 75vw;
+  margin-bottom: 8px;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-item:nth-child(odd) {
+  margin-left: 20vw;
+}
+
+.item-image{
+  height: 60px;
+  width: 120px;
+  object-fit: cover;
+  filter: brightness(70%);
+}

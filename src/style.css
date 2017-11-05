@@ -11,14 +11,15 @@ h1 {
   color: white;
   font-weight: 200;
   filter:drop-shadow(4px 4px 4px black);
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: -32px;
   padding-top: 32px;
+  padding-bottom: 60px;
 }
 
 .content {
@@ -31,7 +32,7 @@ h1 {
 }
 
 .background {
-  z-index: -1;
+  z-index: -2;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -42,23 +43,21 @@ h1 {
   filter: brightness(70%);
 }
 
+.background2 {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background: linear-gradient(to bottom, #A081FA 0%,#182432 100%);
+}
+
 .card {
   background-color: white;
   box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   padding: 10px;
-}
-
-.card-item {
-  background-color: white;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  padding: 12px;
-  width: 60vw;
-  margin-bottom: 16px;
-  margin-left: 10vw;
-}
-
-.card-item:nth-child(odd) {
-  margin-left: 30vw;
 }
 
 .input {

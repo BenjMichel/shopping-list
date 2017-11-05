@@ -1,18 +1,15 @@
 import { Component } from 'preact';
-import './style.css';
-import photo1 from './assets/photo1.jpg'
-import photo2 from './assets/photo2.jpg'
-import photo3 from './assets/photo3.jpg'
-import photo4 from './assets/photo4.jpg'
+import './src/style.css';
+import Item from './src/Item'
 
-const photos = [photo1, photo2, photo3, photo4];
+const photosNumber = 8;
 
 export default class App extends Component {
   constructor() {
     super();
     const currentItems = (typeof localStorage !== 'undefined') ? JSON.parse(localStorage.getItem('currentItems')) : [];
     this.state = {
-      photo: photos[Math.floor(Math.random() * photos.length)],
+      photoName: Math.floor(Math.random() * photosNumber) + 1,
       currentItems: currentItems || [],
     };
   }
@@ -27,9 +24,12 @@ export default class App extends Component {
   renderHome() {
     return (
       <div className="container">
-        <div className="background" style={{ backgroundImage: `url(${this.state.photo})` }} />
+        <div className="background" style={{ backgroundImage: `url(/assets/backgrounds/photo${this.state.photoName}.jpg)` }} />
+        <div className="background2" />
         <h1>Shopping list!</h1>
-        {this.state.currentItems.map(item => <div className="card-item">{item}</div>)}
+        <div>
+          {this.state.currentItems.map(item => <Item item={item} />)}
+        </div>
         <div className="footer" onClick={() => this.setState({ showAdd: true })}>
           ajouter
         </div>
