@@ -21,6 +21,8 @@ import tomato from '../assets/items/tomato.jpg';
 import vegetable from '../assets/items/vegetable.jpg';
 import yogurt from '../assets/items/yogurt.jpg';
 
+import defaultImage from '../assets/items/default.jpg';
+
 const itemMapping = [
   { image: banana, keywords: ['banana', 'banane'] },
   { image: apple, keywords: ['apple', 'pomme'] },
@@ -45,8 +47,6 @@ const itemMapping = [
   { image: vegetable, keywords: ['vegetable', 'légume', 'aubergine', 'poivron', 'poireau'] },
   { image: yogurt, keywords: ['yogurt', 'yaourt'] },
 ];
-
-const defaultImage = 'default.jpg';
 
 function findItem(query) {
   return itemMapping.find(row => row.keywords.includes(query))
