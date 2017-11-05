@@ -15,10 +15,19 @@ export default class App extends Component {
   }
 
   addItemToList(item) {
+    if (!item) {
+      this.setState({ showAdd: false });
+      return;
+    }
     const currentItems = [...this.state.currentItems, item];
     this.setState({ showAdd: false, currentItems });
     if (typeof localStorage !== 'undefined')
       localStorage.setItem('currentItems', JSON.stringify(currentItems));
+  }
+
+  openAdd() {
+    window.scroll(0, 0);
+    this.setState({ showAdd: true });
   }
 
   renderHome() {
@@ -30,8 +39,8 @@ export default class App extends Component {
         <div>
           {this.state.currentItems.map(item => <Item item={item} />)}
         </div>
-        <div className="footer" onClick={() => this.setState({ showAdd: true })}>
-          ajouter
+        <div className="footer" onClick={() => this.openAdd()}>
+          ajouter un ingrédient
         </div>
       </div>
     );
@@ -40,7 +49,8 @@ export default class App extends Component {
   renderAdd() {
     return (
       <div className="container">
-        <div className="background" style={{ backgroundImage: `url(${this.state.photo})` }} />
+        <div className="background" style={{ backgroundImage: `url(/assets/backgrounds/photo${this.state.photoName}.jpg)` }} />
+        <div className="background2" />
         <div className="content">
           <div className="card">
             <input
