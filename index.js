@@ -30,6 +30,13 @@ export default class App extends Component {
     this.setState({ showAdd: true });
   }
 
+  deleteItem(item) {
+    const currentItems = this.state.currentItems.filter(itemIt => itemIt !== item);
+    this.setState({ currentItems });
+    if (typeof localStorage !== 'undefined')
+      localStorage.setItem('currentItems', JSON.stringify(currentItems));
+  }
+
   renderHome() {
     return (
       <div className="container">
@@ -37,7 +44,9 @@ export default class App extends Component {
         <div className="background2" />
         <h1>Shopping list!</h1>
         <div>
-          {this.state.currentItems.map(item => <Item item={item} />)}
+          {this.state.currentItems.map(item =>
+            <Item item={item} delete={() => this.deleteItem(item)} />
+          )}
         </div>
         <div className="footer" onClick={() => this.openAdd()}>
           ajouter un ingrédient

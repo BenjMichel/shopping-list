@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  transition: .5s ease-in-out;
 }
 
 .card-item:nth-child(odd) {
