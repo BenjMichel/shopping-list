@@ -9,7 +9,7 @@ export default class Item extends Component {
       <div className="card-item">
         <img src='https:icon.now.sh/check/24' onClick={this.props.delete} />
         <span>{item.toLowerCase()}</span>
-        {getImage(item) && <img className="item-image" src={`/assets/items/${getImage(item)}`} />}
+        {getImage(item) && <img className="item-image" src={getImage(item)} />}
       </div>
     );
   }
