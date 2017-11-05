@@ -7,7 +7,9 @@ export default class Item extends Component {
     const { item } = this.props;
     return (
       <div className="card-item">
-        <img src='https:icon.now.sh/check/24' onClick={this.props.delete} />
+        <span className="icon-container">
+          <img src='https:icon.now.sh/check/24/ffffff' onClick={this.props.delete} />
+        </span>
         <span>{item.toLowerCase()}</span>
         {getImage(item) && <img className="item-image" src={getImage(item)} />}
       </div>

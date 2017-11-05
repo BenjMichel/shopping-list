@@ -51,7 +51,7 @@ h1 {
   top: 0;
   left: 0;
   opacity: 0.2;
-  background: linear-gradient(to bottom, #A081FA 0%,#182432 100%);
+  background: linear-gradient(to bottom, #A081FA 0%,#7BB9F6 100%);
 }
 
 .card {
@@ -82,7 +82,5 @@ h1 {
   text-align: center;
   font-weight: 200;
   font-size: 20px;
-
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#182432+0,41465d+100 */
-  background: linear-gradient(to right, #182432 0%,#41465d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to right, #A081FA 0%,#7BB9F6 100%);
 }
