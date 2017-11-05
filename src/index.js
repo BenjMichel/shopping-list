@@ -1,15 +1,23 @@
 import { Component } from 'preact';
 import './style.css';
-import Item from './Item'
+import Item from './Item';
+import photo1 from '../assets/backgrounds/photo1.jpg';
+import photo2 from '../assets/backgrounds/photo2.jpg';
+import photo3 from '../assets/backgrounds/photo3.jpg';
+import photo4 from '../assets/backgrounds/photo4.jpg';
+import photo5 from '../assets/backgrounds/photo5.jpg';
+import photo6 from '../assets/backgrounds/photo6.jpg';
+import photo7 from '../assets/backgrounds/photo7.jpg';
+import photo8 from '../assets/backgrounds/photo8.jpg';
 
-const photosNumber = 8;
+const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8];
 
 export default class App extends Component {
   constructor() {
     super();
     const currentItems = (typeof localStorage !== 'undefined') ? JSON.parse(localStorage.getItem('currentItems')) : [];
     this.state = {
-      photoName: Math.floor(Math.random() * photosNumber) + 1,
+      photo: photos[Math.floor(Math.random() * photos.length)],
       currentItems: currentItems || [],
     };
   }
@@ -40,7 +48,7 @@ export default class App extends Component {
   renderHome() {
     return (
       <div className="container">
-        <div className="background" style={{ backgroundImage: `url(/assets/backgrounds/photo${this.state.photoName}.jpg)` }} />
+        <div className="background" style={{ backgroundImage: `url(${this.state.photo})` }} />
         <div className="background2" />
         <h1>Shopping list!</h1>
         <div>
@@ -58,7 +66,7 @@ export default class App extends Component {
   renderAdd() {
     return (
       <div className="container">
-        <div className="background" style={{ backgroundImage: `url(/assets/backgrounds/photo${this.state.photoName}.jpg)` }} />
+        <div className="background" style={{ backgroundImage: `url(${this.state.photo})` }} />
         <div className="background2" />
         <div className="content">
           <div className="card">
