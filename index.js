@@ -10,16 +10,18 @@ const photos = [photo1, photo2, photo3, photo4];
 export default class App extends Component {
   constructor() {
     super();
+    const currentItems = (typeof localStorage !== 'undefined') ? JSON.parse(localStorage.getItem('currentItems')) : [];
     this.state = {
       photo: photos[Math.floor(Math.random() * photos.length)],
-      currentItems: JSON.parse(localStorage.getItem('currentItems')) || [],
+      currentItems: currentItems || [],
     };
   }
 
   addItemToList(item) {
     const currentItems = [...this.state.currentItems, item];
     this.setState({ showAdd: false, currentItems });
-    localStorage.setItem('currentItems', JSON.stringify(currentItems));
+    if (typeof localStorage !== 'undefined')
+      localStorage.setItem('currentItems', JSON.stringify(currentItems));
   }
 
   renderHome() {
