@@ -10,8 +10,9 @@ export default class Item extends Component {
         <span className="icon-container">
           <img src="https:icon.now.sh/check/24/ffffff" onClick={this.props.delete} />
         </span>
-        <span>{item.toLowerCase()}</span>
-        {getImage(item) && <img className="item-image" src={getImage(item)} />}
+        <div className="overlay" />
+        <div className="item-image" style={{ backgroundImage: `url(${getImage(item)})` }}>
+          <span className="item-text">{item.toLowerCase()}</span></div>
       </div>
     );
   }
