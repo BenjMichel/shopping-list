@@ -73,6 +73,7 @@ export default class App extends Component {
             <input
               type="text"
               className="input"
+              placeholder="ingrédient"
               onInput={e => this.setState({ currentItem: e.target.value })}
             />
           </div>
