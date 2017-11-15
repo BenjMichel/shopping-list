@@ -12,6 +12,16 @@
   transition: .5s ease-in-out;
 }
 
+@keyframes item-delete-anim {
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+
+.card-item-delete {
+  animation-name: item-delete-anim;
+  animation-duration: 0.5s;
+}
+
 .card-item:nth-child(odd) {
   margin-left: calc(5vw + 60px);
 }
@@ -24,6 +34,16 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right, #A081FA 0%,#7BB9F6 100%);
+}
+
+@keyframes icon-delete-anim {
+    from {transform: rotateY(0);}
+    to {transform: rotateY(180deg);}
+}
+
+.icon-delete {
+  animation-name: icon-delete-anim;
+  animation-duration: 0.5s;
 }
 
 .item-image{

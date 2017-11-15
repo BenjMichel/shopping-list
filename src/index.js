@@ -53,7 +53,7 @@ export default class App extends Component {
         <h1>Shopping list!</h1>
         <div>
           {this.state.currentItems.map(item =>
-            <Item item={item} delete={() => this.deleteItem(item)} />
+            <Item key={item} item={item} delete={() => this.deleteItem(item)} />
           )}
         </div>
         <div className="footer" onClick={() => this.openAdd()}>
