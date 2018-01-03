@@ -20,9 +20,11 @@ import mushroom from '../assets/items/mushroom.jpg';
 import nut from '../assets/items/nut.jpg';
 import olive from '../assets/items/olive.jpg';
 import onion from '../assets/items/onion.jpg';
+import orange from '../assets/items/orange.jpg';
 import pasta from '../assets/items/pasta.jpg';
 import pear from '../assets/items/pear.jpg';
 import salad from '../assets/items/salad.jpg';
+import sausage from '../assets/items/sausage.jpg';
 import soap from '../assets/items/soap.jpg';
 import spice from '../assets/items/spice.jpg';
 import tea from '../assets/items/tea.jpg';
@@ -43,13 +45,13 @@ const itemMapping = [
   { image: bread, keywords: ['bread', 'pain', 'baguette'] },
   { image: carrot, keywords: ['carrot', 'carrotte', 'coleslaw'] },
   { image: cereal, keywords: ['cereal', 'cereale'] },
-  { image: cheese, keywords: ['cheese', 'fromage', 'comte', 'mimolette', 'tomme', 'parmesan'] },
+  { image: cheese, keywords: ['cheese', 'fromage', 'comte', 'mimolette', 'tomme', 'parmesan', 'chevre', 'madame loick'] },
   { image: chocolate, keywords: ['chocolate', 'chocolat'] },
   { image: cookie, keywords: ['biscuit', 'speculos', 'oreo'] },
   { image: egg, keywords: ['egg', 'oeuf'] },
   { image: fish, keywords: ['fish', 'poisson', 'saumon', 'cabillot'] },
-  { image: fruit, keywords: ['fruit'] },
-  { image: gnocchis, keywords: ['gnocchis', 'raviolis'] },
+  { image: fruit, keywords: ['fruit', 'compote'] },
+  { image: gnocchis, keywords: ['gnocchis', 'raviolis', 'tortellini'] },
   { image: juice, keywords: ['jus', 'jus de fruits'] },
   { image: meat, keywords: ['meat', 'viande', 'poulet', 'boeuf', 'porc', 'dinde', 'canard'] },
   { image: milk, keywords: ['milk', 'lait', 'creme', 'cream'] },
@@ -57,12 +59,14 @@ const itemMapping = [
   { image: nut, keywords: ['nut', 'noix', 'walnut', 'pistache'] },
   { image: olive, keywords: ['huile d\'olive', 'huile', 'olive'] },
   { image: onion, keywords: ['onion', 'oignon'] },
+  { image: orange, keywords: ['orange', 'citron', 'agrume', 'pamplemousse'] },
   { image: pasta, keywords: ['pasta', 'pate', 'riz', 'pâte'] },
   { image: pear, keywords: ['pear', 'poire'] },
   { image: salad, keywords: ['salad', 'salade'] },
+  { image: sausage, keywords: ['sausage', 'saucisse'] },
   { image: soap, keywords: ['soap', 'savon', 'gel douche', 'shampoing'] },
   { image: spice, keywords: ['spice', 'epice', 'curry', 'paprika', 'sel', 'poivre'] },
-  { image: tea, keywords: ['tea', 'the', 'infusion'] },
+  { image: tea, keywords: ['tea', 'the', 'infusion', 'rooibos'] },
   { image: tiramisu, keywords: ['tiramisu', 'mascarpone'] },
   { image: tomato, keywords: ['tomato', 'tomate'] },
   { image: vegetable, keywords: ['vegetable', 'legume', 'aubergine', 'poivron', 'poireau'] },
