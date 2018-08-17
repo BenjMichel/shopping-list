@@ -3,7 +3,9 @@ import avocado from '../assets/items/avocado.jpg';
 import bacon from '../assets/items/bacon.jpg';
 import banana from '../assets/items/banana.jpg';
 import berry from '../assets/items/berry.jpg';
+import blueberry from '../assets/items/blueberry.jpg';
 import bread from '../assets/items/bread.jpg';
+import broccoli from '../assets/items/broccoli.jpg';
 import carrot from '../assets/items/carrot.jpg';
 import cereal from '../assets/items/cereal.jpg';
 import cheese from '../assets/items/cheese.jpg';
@@ -12,6 +14,7 @@ import cookie from '../assets/items/cookie.jpg';
 import egg from '../assets/items/egg.jpg';
 import fish from '../assets/items/fish.jpg';
 import fruit from '../assets/items/fruit.jpg';
+import hummus from '../assets/items/hummus.jpg';
 import gnocchis from '../assets/items/gnocchis.jpg';
 import juice from '../assets/items/juice.jpg';
 import meat from '../assets/items/meat.jpg';
@@ -24,9 +27,12 @@ import orange from '../assets/items/orange.jpg';
 import pasta from '../assets/items/pasta.jpg';
 import pear from '../assets/items/pear.jpg';
 import salad from '../assets/items/salad.jpg';
+import sauce from '../assets/items/sauce.jpg';
 import sausage from '../assets/items/sausage.jpg';
 import soap from '../assets/items/soap.jpg';
+import seeds from '../assets/items/seeds.jpg';
 import spice from '../assets/items/spice.jpg';
+import spinach from '../assets/items/spinach.jpg';
 import tea from '../assets/items/tea.jpg';
 import tiramisu from '../assets/items/tiramisu.jpg';
 import tomato from '../assets/items/tomato.jpg';
@@ -41,16 +47,19 @@ const itemMapping = [
   { image: avocado, keywords: ['avocado', 'avocat'] },
   { image: bacon, keywords: ['bacon', 'lardon'] },
   { image: banana, keywords: ['banana', 'banane'] },
-  { image: berry, keywords: ['berry', 'blueberry', 'strawberry', 'myrtille', 'fraise', 'framboise'] },
+  { image: berry, keywords: ['berry', 'strawberry', 'myrtille', 'fraise', 'framboise'] },
+  { image: blueberry, keywords: ['myrtille', 'blueberry'] },
+  { image: broccoli, keywords: ['broccoli'] },
   { image: bread, keywords: ['bread', 'pain', 'baguette'] },
-  { image: carrot, keywords: ['carrot', 'carrotte', 'coleslaw'] },
+  { image: carrot, keywords: ['carrot', 'carrotte', 'carotte', 'coleslaw'] },
   { image: cereal, keywords: ['cereal', 'cereale'] },
-  { image: cheese, keywords: ['cheese', 'fromage', 'comte', 'mimolette', 'tomme', 'parmesan', 'chevre', 'madame loick'] },
+  { image: cheese, keywords: ['cheese', 'fromage', 'comte', 'mimolette', 'tomme', 'parmesan', 'chevre', 'madame loick', 'reblochon', 'mozzarella'] },
   { image: chocolate, keywords: ['chocolate', 'chocolat'] },
   { image: cookie, keywords: ['biscuit', 'speculos', 'oreo'] },
-  { image: egg, keywords: ['egg', 'oeuf'] },
-  { image: fish, keywords: ['fish', 'poisson', 'saumon', 'cabillot'] },
+  { image: egg, keywords: ['egg', 'oeuf', 'œuf'] },
+  { image: fish, keywords: ['fish', 'poisson', 'saumon', 'cabillot', 'thon'] },
   { image: fruit, keywords: ['fruit', 'compote'] },
+  { image: hummus, keywords: ['hummus', 'houmous'] },
   { image: gnocchis, keywords: ['gnocchis', 'raviolis', 'tortellini'] },
   { image: juice, keywords: ['jus', 'jus de fruits'] },
   { image: meat, keywords: ['meat', 'viande', 'poulet', 'boeuf', 'porc', 'dinde', 'canard'] },
@@ -63,13 +72,16 @@ const itemMapping = [
   { image: pasta, keywords: ['pasta', 'pate', 'riz', 'pâte'] },
   { image: pear, keywords: ['pear', 'poire'] },
   { image: salad, keywords: ['salad', 'salade'] },
+  { image: sauce, keywords: ['sauce'] },
   { image: sausage, keywords: ['sausage', 'saucisse'] },
-  { image: soap, keywords: ['soap', 'savon', 'gel douche', 'shampoing'] },
-  { image: spice, keywords: ['spice', 'epice', 'curry', 'paprika', 'sel', 'poivre'] },
+  { image: soap, keywords: ['soap', 'savon', 'gel douche', 'shampoing', 'lessive'] },
+  { image: seeds, keywords: ['seeds', 'graine'] },
+  { image: spinach, keywords: ['spinach', 'epinard'] },
+  { image: spice, keywords: ['spice', 'epice', 'curry', 'paprika', 'sel', 'poivre', 'gingembre', 'poivre'] },
   { image: tea, keywords: ['tea', 'the', 'infusion', 'rooibos'] },
   { image: tiramisu, keywords: ['tiramisu', 'mascarpone'] },
   { image: tomato, keywords: ['tomato', 'tomate'] },
-  { image: vegetable, keywords: ['vegetable', 'legume', 'aubergine', 'poivron', 'poireau'] },
+  { image: vegetable, keywords: ['vegetable', 'legume', 'aubergine', 'poivron', 'poireau', 'courgette'] },
   { image: wrap, keywords: ['wrap', 'tortilla', 'burito'] },
   { image: yogurt, keywords: ['yogurt', 'yaourt'] },
 ];
