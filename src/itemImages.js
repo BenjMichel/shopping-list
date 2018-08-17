@@ -37,6 +37,7 @@ import tea from '../assets/items/tea.jpg';
 import tiramisu from '../assets/items/tiramisu.jpg';
 import tomato from '../assets/items/tomato.jpg';
 import vegetable from '../assets/items/vegetable.jpg';
+import water from '../assets/items/water.jpg';
 import wrap from '../assets/items/wrap.jpg';
 import yogurt from '../assets/items/yogurt.jpg';
 
@@ -83,6 +84,7 @@ const itemMapping = [
   { image: tomato, keywords: ['tomato', 'tomate'] },
   { image: vegetable, keywords: ['vegetable', 'legume', 'aubergine', 'poivron', 'poireau', 'courgette'] },
   { image: wrap, keywords: ['wrap', 'tortilla', 'burito'] },
+  { image: water, keywords: ['water', 'eau', 'boisson'] },
   { image: yogurt, keywords: ['yogurt', 'yaourt'] },
 ];
 
