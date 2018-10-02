@@ -19,7 +19,7 @@ export default class Item extends Component {
       <div className={`card-item ${this.state.deleteAnim ? 'card-item-delete' : ''}`}>
         <span className="icon-container">
           <img
-            src="https:icon.now.sh/check/24/ffffff"
+            src="https://icon.now.sh/check/24/ffffff"
             onClick={() => this.delete()}
             className={`${this.state.deleteAnim ? 'icon-delete' : ''}`}
           />
