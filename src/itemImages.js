@@ -88,7 +88,7 @@ const itemMapping = [
   { image: pasta, keywords: ['pasta', 'pate', 'riz', 'pâte'] },
   { image: pear, keywords: ['pear', 'poire'] },
   { image: pepper, keywords: ['pepper', 'poivron'] },
-  { image: salad, keywords: ['salad', 'salade'] },
+  { image: salad, keywords: ['salad', 'salade', 'mache', 'roquette', 'laitue'] },
   { image: sauce, keywords: ['sauce'] },
   { image: sausage, keywords: ['sausage', 'saucisse'] },
   { image: seeds, keywords: ['seeds', 'graine'] },
@@ -106,18 +106,16 @@ const itemMapping = [
 ];
 
 function findItem(query) {
-  const queryWithoutAccent = query.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-  return itemMapping.find((row) => row.keywords.includes(queryWithoutAccent));
+  const queryWithoutAccent = query.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+  const formattedQuery = queryWithoutAccent.endsWith('s')
+    ? queryWithoutAccent.slice(0, -1)
+    : queryWithoutAccent;
+  return itemMapping.find((row) => row.keywords.includes(formattedQuery));
 }
 
 export default function getImage(item = '') {
-  const name = item.toLowerCase().trim();
+  const name = item;
   if (findItem(name)) { return findItem(name).image; }
-
-  if (name.length > 0) {
-    const name2 = name.slice(0, -1);
-    if (findItem(name2)) { return findItem(name2).image; }
-  }
 
   if (name.length > 0) {
     const name2 = name.split(' ')[0];
@@ -127,6 +125,7 @@ export default function getImage(item = '') {
       const name3 = name.split(' ')[1];
       if (findItem(name3)) { return findItem(name3).image; }
     }
+
     if (name.split(' ').length > 2) {
       const name3 = name.split(' ')[2];
       if (findItem(name3)) { return findItem(name3).image; }
