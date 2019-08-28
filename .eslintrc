@@ -1,0 +1,47 @@
+{
+  "extends": "airbnb",
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  "globals": {
+    "React": true,
+    "it": true,
+    "test": true,
+    "describe": true,
+    "expect": true,
+    "cy": true,
+    "chai": true
+  },
+
+  "ecmaFeatures": {
+  },
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+
+  "plugins": [
+  ],
+
+  "settings": {
+    "import/core-modules": ["config"]
+  },
+
+  "rules": {
+    "func-names": 0,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "max-len": ["error", 120],
+    "no-confusing-arrow": 0,
+    "no-param-reassign": 0,
+    "no-var": 0,
+    "one-var": 0,
+    "strict": [2, "global"],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "import/prefer-default-export": 0
+  }
+}
