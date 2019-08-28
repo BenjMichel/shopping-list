@@ -9,7 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  transition: .5s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 @keyframes item-delete-anim {
@@ -19,7 +19,7 @@
 
 .card-item-delete {
   animation-name: item-delete-anim;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
 }
 
 .card-item:nth-child(odd) {
@@ -43,7 +43,7 @@
 
 .icon-delete {
   animation-name: icon-delete-anim;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
 }
 
 .item-image{

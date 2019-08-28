@@ -27,7 +27,7 @@ export default class App extends Component {
       this.setState({ showAdd: false });
       return;
     }
-    const currentItems = [...this.state.currentItems, item];
+    const currentItems = [...this.state.currentItems.filter(itemIt => itemIt !== item), item];
     this.setState({ showAdd: false, currentItems });
     if (typeof localStorage !== 'undefined')
       localStorage.setItem('currentItems', JSON.stringify(currentItems));
