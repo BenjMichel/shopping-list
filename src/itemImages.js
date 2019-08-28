@@ -107,7 +107,7 @@ function findItem(query) {
 }
 
 export default function getImage(item = '') {
-  const name = item.toLowerCase();
+  const name = item.toLowerCase().trim();
   if (findItem(name)) { return findItem(name).image; }
 
   if (name.length > 0) {
@@ -118,6 +118,15 @@ export default function getImage(item = '') {
   if (name.length > 0) {
     const name2 = name.split(' ')[0];
     if (findItem(name2)) { return findItem(name2).image; }
+
+    if (name.split(' ').length > 1) {
+      const name3 = name.split(' ')[1];
+      if (findItem(name3)) { return findItem(name3).image; }
+    }
+    if (name.split(' ').length > 2) {
+      const name3 = name.split(' ')[2];
+      if (findItem(name3)) { return findItem(name3).image; }
+    }
   }
 
   return defaultImage;
