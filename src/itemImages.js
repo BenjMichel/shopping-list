@@ -1,11 +1,13 @@
 import apple from '../assets/items/apple.jpg';
 import avocado from '../assets/items/avocado.jpg';
 import bacon from '../assets/items/bacon.jpg';
+import bakingPowder from '../assets/items/bakingpowder.jpg';
 import banana from '../assets/items/banana.jpg';
 import berry from '../assets/items/berry.jpg';
 import blueberry from '../assets/items/blueberry.jpg';
 import bread from '../assets/items/bread.jpg';
 import broccoli from '../assets/items/broccoli.jpg';
+import butter from '../assets/items/butter.jpg';
 import carrot from '../assets/items/carrot.jpg';
 import cereal from '../assets/items/cereal.jpg';
 import cheese from '../assets/items/cheese.jpg';
@@ -14,8 +16,8 @@ import cookie from '../assets/items/cookie.jpg';
 import egg from '../assets/items/egg.jpg';
 import fish from '../assets/items/fish.jpg';
 import fruit from '../assets/items/fruit.jpg';
-import hummus from '../assets/items/hummus.jpg';
 import gnocchis from '../assets/items/gnocchis.jpg';
+import hummus from '../assets/items/hummus.jpg';
 import juice from '../assets/items/juice.jpg';
 import meat from '../assets/items/meat.jpg';
 import milk from '../assets/items/milk.jpg';
@@ -26,13 +28,15 @@ import onion from '../assets/items/onion.jpg';
 import orange from '../assets/items/orange.jpg';
 import pasta from '../assets/items/pasta.jpg';
 import pear from '../assets/items/pear.jpg';
+import pepper from '../assets/items/pepper.jpg';
 import salad from '../assets/items/salad.jpg';
 import sauce from '../assets/items/sauce.jpg';
 import sausage from '../assets/items/sausage.jpg';
-import soap from '../assets/items/soap.jpg';
 import seeds from '../assets/items/seeds.jpg';
+import soap from '../assets/items/soap.jpg';
 import spice from '../assets/items/spice.jpg';
 import spinach from '../assets/items/spinach.jpg';
+import sweetPotato from '../assets/items/sweetpotato.jpg';
 import tea from '../assets/items/tea.jpg';
 import tiramisu from '../assets/items/tiramisu.jpg';
 import tomato from '../assets/items/tomato.jpg';
@@ -47,14 +51,21 @@ const itemMapping = [
   { image: apple, keywords: ['apple', 'pomme'] },
   { image: avocado, keywords: ['avocado', 'avocat'] },
   { image: bacon, keywords: ['bacon', 'lardon'] },
+  { image: bakingPowder, keywords: ['yeast', 'baking powder', 'levure'] },
   { image: banana, keywords: ['banana', 'banane'] },
   { image: berry, keywords: ['berry', 'strawberry', 'myrtille', 'fraise', 'framboise'] },
   { image: blueberry, keywords: ['myrtille', 'blueberry'] },
-  { image: broccoli, keywords: ['broccoli'] },
   { image: bread, keywords: ['bread', 'pain', 'baguette'] },
+  { image: broccoli, keywords: ['broccoli'] },
+  { image: butter, keywords: ['butter', 'beurre', 'margarine'] },
   { image: carrot, keywords: ['carrot', 'carrotte', 'carotte', 'coleslaw'] },
   { image: cereal, keywords: ['cereal', 'cereale'] },
-  { image: cheese, keywords: ['cheese', 'fromage', 'comte', 'mimolette', 'tomme', 'parmesan', 'chevre', 'madame loick', 'reblochon', 'mozzarella'] },
+  {
+    image: cheese,
+    keywords: [
+      'cheese', 'fromage', 'comte', 'mimolette', 'tomme', 'parmesan', 'chevre',
+      'madame loick', 'reblochon', 'mozzarella'],
+  },
   { image: chocolate, keywords: ['chocolate', 'chocolat'] },
   { image: cookie, keywords: ['biscuit', 'speculos', 'oreo'] },
   { image: egg, keywords: ['egg', 'oeuf', 'œuf'] },
@@ -72,25 +83,27 @@ const itemMapping = [
   { image: orange, keywords: ['orange', 'citron', 'agrume', 'pamplemousse'] },
   { image: pasta, keywords: ['pasta', 'pate', 'riz', 'pâte'] },
   { image: pear, keywords: ['pear', 'poire'] },
+  { image: pepper, keywords: ['pepper', 'poivron'] },
   { image: salad, keywords: ['salad', 'salade'] },
   { image: sauce, keywords: ['sauce'] },
   { image: sausage, keywords: ['sausage', 'saucisse'] },
-  { image: soap, keywords: ['soap', 'savon', 'gel douche', 'shampoing', 'lessive'] },
   { image: seeds, keywords: ['seeds', 'graine'] },
-  { image: spinach, keywords: ['spinach', 'epinard'] },
+  { image: soap, keywords: ['soap', 'savon', 'gel douche', 'shampoing', 'lessive'] },
   { image: spice, keywords: ['spice', 'epice', 'curry', 'paprika', 'sel', 'poivre', 'gingembre', 'poivre'] },
+  { image: spinach, keywords: ['spinach', 'epinard'] },
+  { image: sweetPotato, keywords: ['sweet potato', 'patate douce'] },
   { image: tea, keywords: ['tea', 'the', 'infusion', 'rooibos'] },
   { image: tiramisu, keywords: ['tiramisu', 'mascarpone'] },
   { image: tomato, keywords: ['tomato', 'tomate'] },
-  { image: vegetable, keywords: ['vegetable', 'legume', 'aubergine', 'poivron', 'poireau', 'courgette'] },
-  { image: wrap, keywords: ['wrap', 'tortilla', 'burito'] },
+  { image: vegetable, keywords: ['vegetable', 'legume', 'aubergine', 'poireau', 'courgette', 'potiron'] },
   { image: water, keywords: ['water', 'eau', 'boisson'] },
+  { image: wrap, keywords: ['wrap', 'tortilla', 'burito'] },
   { image: yogurt, keywords: ['yogurt', 'yaourt'] },
 ];
 
 function findItem(query) {
   const queryWithoutAccent = query.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-  return itemMapping.find(row => row.keywords.includes(queryWithoutAccent));
+  return itemMapping.find((row) => row.keywords.includes(queryWithoutAccent));
 }
 
 export default function getImage(item = '') {
@@ -108,4 +121,4 @@ export default function getImage(item = '') {
   }
 
   return defaultImage;
-};
+}
