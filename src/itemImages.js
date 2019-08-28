@@ -8,6 +8,7 @@ import blueberry from '../assets/items/blueberry.jpg';
 import bread from '../assets/items/bread.jpg';
 import broccoli from '../assets/items/broccoli.jpg';
 import butter from '../assets/items/butter.jpg';
+import cacao from '../assets/items/cacao.jpg';
 import carrot from '../assets/items/carrot.jpg';
 import cereal from '../assets/items/cereal.jpg';
 import cheese from '../assets/items/cheese.jpg';
@@ -19,6 +20,7 @@ import fruit from '../assets/items/fruit.jpg';
 import gnocchis from '../assets/items/gnocchis.jpg';
 import hummus from '../assets/items/hummus.jpg';
 import juice from '../assets/items/juice.jpg';
+import maki from '../assets/items/maki.jpg';
 import meat from '../assets/items/meat.jpg';
 import milk from '../assets/items/milk.jpg';
 import mushroom from '../assets/items/mushroom.jpg';
@@ -58,6 +60,7 @@ const itemMapping = [
   { image: bread, keywords: ['bread', 'pain', 'baguette'] },
   { image: broccoli, keywords: ['broccoli'] },
   { image: butter, keywords: ['butter', 'beurre', 'margarine'] },
+  { image: cacao, keywords: ['cacao', 'van houten'] },
   { image: carrot, keywords: ['carrot', 'carrotte', 'carotte', 'coleslaw'] },
   { image: cereal, keywords: ['cereal', 'cereale'] },
   {
@@ -74,6 +77,7 @@ const itemMapping = [
   { image: hummus, keywords: ['hummus', 'houmous'] },
   { image: gnocchis, keywords: ['gnocchis', 'raviolis', 'tortellini'] },
   { image: juice, keywords: ['jus', 'jus de fruits'] },
+  { image: maki, keywords: ['maki', 'sushi', 'algues', 'wasabi'] },
   { image: meat, keywords: ['meat', 'viande', 'poulet', 'boeuf', 'porc', 'dinde', 'canard'] },
   { image: milk, keywords: ['milk', 'lait', 'creme', 'cream'] },
   { image: mushroom, keywords: ['mushroom', 'champignon'] },
