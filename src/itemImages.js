@@ -49,60 +49,86 @@ import yogurt from '../assets/items/yogurt.jpg';
 
 import defaultImage from '../assets/items/default.jpg';
 
+export const categories = {
+  fruitVegetable: 'Fruits et légumes',
+  dairy: 'Laitiers',
+  meatFish: 'Viande et poisson',
+  groceries: 'Epicerie',
+  drink: 'Boissons',
+  other: 'Autre',
+};
+
 const itemMapping = [
-  { image: apple, keywords: ['apple', 'pomme'] },
-  { image: avocado, keywords: ['avocado', 'avocat'] },
-  { image: bacon, keywords: ['bacon', 'lardon'] },
-  { image: bakingPowder, keywords: ['yeast', 'baking powder', 'levure'] },
-  { image: banana, keywords: ['banana', 'banane'] },
-  { image: berry, keywords: ['berry', 'strawberry', 'myrtille', 'fraise', 'framboise'] },
-  { image: blueberry, keywords: ['myrtille', 'blueberry'] },
-  { image: bread, keywords: ['bread', 'pain', 'baguette'] },
-  { image: broccoli, keywords: ['broccoli'] },
-  { image: butter, keywords: ['butter', 'beurre', 'margarine'] },
-  { image: cacao, keywords: ['cacao', 'van houten'] },
-  { image: carrot, keywords: ['carrot', 'carrotte', 'carotte', 'coleslaw'] },
-  { image: cereal, keywords: ['cereal', 'cereale'] },
+  { image: apple, keywords: ['apple', 'pomme'], category: categories.fruitVegetable },
+  { image: avocado, keywords: ['avocado', 'avocat'], category: categories.fruitVegetable },
+  { image: bacon, keywords: ['bacon', 'lardon'], category: categories.meatFish },
+  { image: bakingPowder, keywords: ['yeast', 'baking powder', 'levure'], category: categories.groceries },
+  { image: banana, keywords: ['banana', 'banane'], category: categories.fruitVegetable },
+  {
+    image: berry,
+    keywords: ['berry', 'strawberry', 'myrtille', 'fraise', 'framboise'],
+    category: categories.fruitVegetable,
+  },
+  { image: blueberry, keywords: ['myrtille', 'blueberry'], category: categories.fruitVegetable },
+  { image: bread, keywords: ['bread', 'pain', 'baguette'], category: categories.groceries },
+  { image: broccoli, keywords: ['broccoli'], category: categories.fruitVegetable },
+  { image: butter, keywords: ['butter', 'beurre', 'margarine'], category: categories.dairy },
+  { image: cacao, keywords: ['cacao', 'van houten'], category: categories.groceries },
+  { image: carrot, keywords: ['carrot', 'carrotte', 'carotte', 'coleslaw'], category: categories.fruitVegetable },
+  { image: cereal, keywords: ['cereal', 'cereale'], category: categories.groceries },
   {
     image: cheese,
     keywords: [
       'cheese', 'fromage', 'comte', 'mimolette', 'tomme', 'parmesan', 'chevre',
       'madame loick', 'reblochon', 'mozzarella'],
+    category: categories.dairy,
   },
-  { image: chocolate, keywords: ['chocolate', 'chocolat'] },
-  { image: cookie, keywords: ['biscuit', 'speculos', 'oreo'] },
-  { image: egg, keywords: ['egg', 'oeuf', 'œuf'] },
-  { image: fish, keywords: ['fish', 'poisson', 'saumon', 'cabillot', 'thon'] },
-  { image: fruit, keywords: ['fruit', 'compote'] },
-  { image: hummus, keywords: ['hummus', 'houmous'] },
-  { image: gnocchis, keywords: ['gnocchis', 'raviolis', 'tortellini'] },
-  { image: juice, keywords: ['jus', 'jus de fruits'] },
-  { image: maki, keywords: ['maki', 'sushi', 'algues', 'wasabi'] },
-  { image: meat, keywords: ['meat', 'viande', 'poulet', 'boeuf', 'porc', 'dinde', 'canard'] },
-  { image: milk, keywords: ['milk', 'lait', 'creme', 'cream'] },
-  { image: mushroom, keywords: ['mushroom', 'champignon'] },
-  { image: nut, keywords: ['nut', 'noix', 'walnut', 'pistache'] },
-  { image: olive, keywords: ['huile d\'olive', 'huile', 'olive'] },
-  { image: onion, keywords: ['onion', 'oignon'] },
-  { image: orange, keywords: ['orange', 'citron', 'agrume', 'pamplemousse'] },
-  { image: pasta, keywords: ['pasta', 'pate', 'riz', 'pâte'] },
-  { image: pear, keywords: ['pear', 'poire'] },
-  { image: pepper, keywords: ['pepper', 'poivron'] },
-  { image: salad, keywords: ['salad', 'salade', 'mache', 'roquette', 'laitue'] },
-  { image: sauce, keywords: ['sauce'] },
-  { image: sausage, keywords: ['sausage', 'saucisse'] },
-  { image: seeds, keywords: ['seeds', 'graine'] },
-  { image: soap, keywords: ['soap', 'savon', 'gel douche', 'shampoing', 'lessive'] },
-  { image: spice, keywords: ['spice', 'epice', 'curry', 'paprika', 'sel', 'poivre', 'gingembre', 'poivre'] },
-  { image: spinach, keywords: ['spinach', 'epinard'] },
-  { image: sweetPotato, keywords: ['sweet potato', 'patate douce'] },
-  { image: tea, keywords: ['tea', 'the', 'infusion', 'rooibos'] },
-  { image: tiramisu, keywords: ['tiramisu', 'mascarpone'] },
-  { image: tomato, keywords: ['tomato', 'tomate'] },
-  { image: vegetable, keywords: ['vegetable', 'legume', 'aubergine', 'poireau', 'courgette', 'potiron'] },
-  { image: water, keywords: ['water', 'eau', 'boisson'] },
-  { image: wrap, keywords: ['wrap', 'tortilla', 'burito'] },
-  { image: yogurt, keywords: ['yogurt', 'yaourt'] },
+  { image: chocolate, keywords: ['chocolate', 'chocolat'], category: categories.groceries },
+  { image: cookie, keywords: ['biscuit', 'speculos', 'oreo'], category: categories.groceries },
+  { image: egg, keywords: ['egg', 'oeuf', 'œuf'], category: categories.meatFish },
+  { image: fish, keywords: ['fish', 'poisson', 'saumon', 'cabillot', 'thon'], category: categories.meatFish },
+  { image: fruit, keywords: ['fruit', 'compote'], category: categories.fruitVegetable },
+  { image: hummus, keywords: ['hummus', 'houmous'], category: categories.groceries },
+  { image: gnocchis, keywords: ['gnocchis', 'raviolis', 'tortellini'], category: categories.groceries },
+  { image: juice, keywords: ['jus', 'jus de fruits'], category: categories.drink },
+  { image: maki, keywords: ['maki', 'sushi', 'algues', 'wasabi'], category: categories.groceries },
+  {
+    image: meat,
+    keywords: ['meat', 'viande', 'poulet', 'boeuf', 'porc', 'dinde', 'canard'],
+    category: categories.meatFish,
+  },
+  { image: milk, keywords: ['milk', 'lait', 'creme', 'cream'], category: categories.dairy },
+  { image: mushroom, keywords: ['mushroom', 'champignon'], category: categories.fruitVegetable },
+  { image: nut, keywords: ['nut', 'noix', 'walnut', 'pistache'], category: categories.groceries },
+  { image: olive, keywords: ['huile d\'olive', 'huile', 'olive'], category: categories.groceries },
+  { image: onion, keywords: ['onion', 'oignon'], category: categories.fruitVegetable },
+  { image: orange, keywords: ['orange', 'citron', 'agrume', 'pamplemousse'], category: categories.fruitVegetable },
+  { image: pasta, keywords: ['pasta', 'pate', 'riz', 'pâte'], category: categories.groceries },
+  { image: pear, keywords: ['pear', 'poire'], category: categories.fruitVegetable },
+  { image: pepper, keywords: ['pepper', 'poivron'], category: categories.fruitVegetable },
+  { image: salad, keywords: ['salad', 'salade', 'mache', 'roquette', 'laitue'], category: categories.fruitVegetable },
+  { image: sauce, keywords: ['sauce'], category: categories.groceries },
+  { image: sausage, keywords: ['sausage', 'saucisse'], category: categories.meatFish },
+  { image: seeds, keywords: ['seeds', 'graine'], category: categories.groceries },
+  { image: soap, keywords: ['soap', 'savon', 'gel douche', 'shampoing', 'lessive'], category: categories.other },
+  {
+    image: spice,
+    keywords: ['spice', 'epice', 'curry', 'paprika', 'sel', 'poivre', 'gingembre', 'poivre'],
+    category: categories.groceries,
+  },
+  { image: spinach, keywords: ['spinach', 'epinard'], category: categories.fruitVegetable },
+  { image: sweetPotato, keywords: ['sweet potato', 'patate douce'], category: categories.fruitVegetable },
+  { image: tea, keywords: ['tea', 'the', 'infusion', 'rooibos'], category: categories.drink },
+  { image: tiramisu, keywords: ['tiramisu', 'mascarpone'], category: categories.dairy },
+  { image: tomato, keywords: ['tomato', 'tomate'], category: categories.fruitVegetable },
+  {
+    image: vegetable,
+    keywords: ['vegetable', 'legume', 'aubergine', 'poireau', 'courgette', 'potiron'],
+    category: categories.fruitVegetable,
+  },
+  { image: water, keywords: ['water', 'eau', 'boisson'], category: categories.drink },
+  { image: wrap, keywords: ['wrap', 'tortilla', 'burito'], category: categories.groceries },
+  { image: yogurt, keywords: ['yogurt', 'yaourt'], category: categories.dairy },
 ];
 
 function findItem(query) {
@@ -113,24 +139,33 @@ function findItem(query) {
   return itemMapping.find((row) => row.keywords.includes(formattedQuery));
 }
 
-export default function getImage(item = '') {
+function getItem(item) {
   const name = item;
-  if (findItem(name)) { return findItem(name).image; }
+  if (findItem(name)) { return findItem(name); }
 
   if (name.length > 0) {
     const name2 = name.split(' ')[0];
-    if (findItem(name2)) { return findItem(name2).image; }
+    if (findItem(name2)) { return findItem(name2); }
 
     if (name.split(' ').length > 1) {
       const name3 = name.split(' ')[1];
-      if (findItem(name3)) { return findItem(name3).image; }
+      if (findItem(name3)) { return findItem(name3); }
     }
 
     if (name.split(' ').length > 2) {
       const name3 = name.split(' ')[2];
-      if (findItem(name3)) { return findItem(name3).image; }
+      if (findItem(name3)) { return findItem(name3); }
     }
   }
+  return null;
+}
 
-  return defaultImage;
+export default function getImage(itemName = '') {
+  const item = getItem(itemName);
+  return item ? item.image : defaultImage;
+}
+
+export function getCategory(itemName) {
+  const item = getItem(itemName);
+  return item ? item.category : categories.other;
 }

@@ -9,24 +9,28 @@ export default class Item extends Component {
   }
 
   delete() {
+    const { delete: deleteFunction } = this.props;
     this.setState({ deleteAnim: true });
-    setTimeout(() => this.props.delete(), 500);
+    setTimeout(() => deleteFunction(), 500);
   }
 
   render() {
     const { item } = this.props;
+    const { deleteAnim } = this.state;
     return (
-      <div className={`card-item ${this.state.deleteAnim ? 'card-item-delete' : ''}`}>
+      <div className={`card-item ${deleteAnim ? 'card-item-delete' : ''}`}>
         <span className="icon-container">
           <img
+            alt={item}
             src="https://icon.now.sh/check/24/ffffff"
             onClick={() => this.delete()}
-            className={`${this.state.deleteAnim ? 'icon-delete' : ''}`}
+            className={`${deleteAnim ? 'icon-delete' : ''}`}
           />
         </span>
         <div className="overlay" />
         <div className="item-image" style={{ backgroundImage: `url(${getImage(item)})` }}>
-          <span className="item-text">{item.toLowerCase()}</span></div>
+          <span className="item-text">{item.toLowerCase()}</span>
+        </div>
       </div>
     );
   }
