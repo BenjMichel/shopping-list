@@ -16,6 +16,7 @@ import chocolate from '../assets/items/chocolate.jpg';
 import cookie from '../assets/items/cookie.jpg';
 import egg from '../assets/items/egg.jpg';
 import fish from '../assets/items/fish.jpg';
+import flour from '../assets/items/flour.jpg';
 import fruit from '../assets/items/fruit.jpg';
 import gnocchis from '../assets/items/gnocchis.jpg';
 import hummus from '../assets/items/hummus.jpg';
@@ -87,6 +88,7 @@ const itemMapping = [
   { image: cookie, keywords: ['biscuit', 'speculos', 'oreo'], category: categories.groceries },
   { image: egg, keywords: ['egg', 'oeuf', 'œuf'], category: categories.meatFish },
   { image: fish, keywords: ['fish', 'poisson', 'saumon', 'cabillot', 'thon'], category: categories.meatFish },
+  { image: flour, keywords: ['flour', 'farine'], category: categories.groceries },
   { image: fruit, keywords: ['fruit', 'compote'], category: categories.fruitVegetable },
   { image: hummus, keywords: ['hummus', 'houmous'], category: categories.groceries },
   { image: gnocchis, keywords: ['gnocchis', 'raviolis', 'tortellini'], category: categories.groceries },
@@ -113,11 +115,11 @@ const itemMapping = [
   { image: soap, keywords: ['soap', 'savon', 'gel douche', 'shampoing', 'lessive'], category: categories.other },
   {
     image: spice,
-    keywords: ['spice', 'epice', 'curry', 'paprika', 'sel', 'poivre', 'gingembre', 'poivre'],
+    keywords: ['spice', 'epice', 'curry', 'paprika', 'sel', 'poivre', 'gingembre', 'poivre', 'basilic'],
     category: categories.groceries,
   },
   { image: spinach, keywords: ['spinach', 'epinard'], category: categories.fruitVegetable },
-  { image: sweetPotato, keywords: ['sweet potato', 'patate douce'], category: categories.fruitVegetable },
+  { image: sweetPotato, keywords: ['sweet potato', 'patate'], category: categories.fruitVegetable },
   { image: tea, keywords: ['tea', 'the', 'infusion', 'rooibos'], category: categories.drink },
   { image: tiramisu, keywords: ['tiramisu', 'mascarpone'], category: categories.dairy },
   { image: tomato, keywords: ['tomato', 'tomate'], category: categories.fruitVegetable },
