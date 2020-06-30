@@ -129,7 +129,10 @@ const itemMapping = [
   { image: tomato, keywords: ['tomato', 'tomate'], category: categories.fruitVegetable },
   {
     image: vegetable,
-    keywords: ['vegetable', 'legume', 'aubergine', 'poireau', 'courgette', 'potiron', 'pois', 'haricot', 'bean'],
+    keywords: [
+      'vegetable', 'legume', 'aubergine', 'poireau', 'courgette', 'potiron', 'pois', 'haricot', 'bean',
+      'cornichons',
+    ],
     category: categories.fruitVegetable,
   },
   { image: water, keywords: ['water', 'eau', 'boisson'], category: categories.drink },
