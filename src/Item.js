@@ -1,6 +1,7 @@
 import { Component } from 'preact';
 import './Item.css';
 import getImage from './itemImages';
+import checkImage from '../assets/check.png';
 
 export default class Item extends Component {
   constructor() {
@@ -22,9 +23,10 @@ export default class Item extends Component {
         <span className="icon-container">
           <img
             alt={item}
-            src="https://icon.now.sh/check/24/ffffff"
+            src={checkImage}
             onClick={() => this.delete()}
             className={`${deleteAnim ? 'icon-delete' : ''}`}
+            style={{ width: 24 }}
           />
         </span>
         <div className="overlay" />
